@@ -1,0 +1,24 @@
+# E2E purchase flow. App id is a placeholder: Ideal Plant is a concept app.
+# Test data: user testing@test.com; the first plant in the Shop has a stock of at least 2.
+appId: com.idealplant.app
+---
+- runFlow:
+    file: ../commons/open_app.yaml
+
+- runFlow:
+    file: ../commons/login_base.yaml
+    env:
+      EMAIL: "testing@test.com"
+      PASSWORD: "Test@1234"
+
+- runFlow:
+    file: ../scenarios/shop/add_to_cart.yaml
+
+- runFlow:
+    file: ../scenarios/cart/review_cart.yaml
+
+- runFlow:
+    file: ../scenarios/checkout/pay_with_card.yaml
+
+- runFlow:
+    file: ../scenarios/confirmation/order_placed_successfully.yaml

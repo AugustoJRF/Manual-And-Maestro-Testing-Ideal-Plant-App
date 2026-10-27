@@ -1,0 +1,20 @@
+# TC-CART-01 · Cart screen content
+# TC-CART-07 · "Checkout" opens the Checkout screen
+appId: com.idealplant.app
+---
+- tapOn:
+    id: "nav_cart_tab"
+
+- extendedWaitUntil:
+    visible:
+      id: "cart_quantity_value"
+      text: "2"
+    timeout: 10000
+
+- tapOn:
+    id: "cart_checkout_button"
+
+- extendedWaitUntil:
+    visible:
+      id: "checkout_pay_button"
+    timeout: 10000

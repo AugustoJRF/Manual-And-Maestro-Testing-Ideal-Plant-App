@@ -1,0 +1,16 @@
+# TC-CONF-01 · Payment is confirmed and the order is placed
+# TC-CONF-03 · "Continue shopping" opens the Shop with the updated stock
+appId: com.idealplant.app
+---
+- extendedWaitUntil:
+    visible:
+      text: "Order placed successfully!"
+    timeout: 30000
+
+- tapOn:
+    id: "confirmation_continue_shopping_button"
+
+- extendedWaitUntil:
+    visible:
+      text: "Buy your ideal plant"
+    timeout: 10000

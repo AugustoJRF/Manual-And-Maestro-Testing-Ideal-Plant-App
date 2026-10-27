@@ -1,0 +1,8 @@
+# TC-CHK-06 · Paying with each method opens the Confirmation
+appId: com.idealplant.app
+---
+- tapOn:
+    id: "checkout_card_radio"
+
+- tapOn:
+    id: "checkout_pay_button"

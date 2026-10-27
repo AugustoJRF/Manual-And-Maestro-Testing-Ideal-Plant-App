@@ -1,0 +1,11 @@
+# TC-SPL-02 · Splash opens the right screen on its own
+appId: com.idealplant.app
+---
+- launchApp:
+    clearState: true
+    clearKeychain: true
+
+- extendedWaitUntil:
+    visible:
+      id: "login_email_input"
+    timeout: 15000

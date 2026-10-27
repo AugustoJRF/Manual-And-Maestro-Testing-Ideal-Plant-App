@@ -1,0 +1,19 @@
+# TC-LOG-06 · Successful login opens the Shop
+appId: com.idealplant.app
+---
+- tapOn:
+    id: "login_email_input"
+- inputText: ${EMAIL}
+
+- tapOn:
+    id: "login_password_input"
+- inputText: ${PASSWORD}
+- hideKeyboard
+
+- tapOn:
+    id: "login_submit_button"
+
+- extendedWaitUntil:
+    visible:
+      text: "Buy your ideal plant"
+    timeout: 10000
