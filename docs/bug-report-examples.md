@@ -43,7 +43,7 @@ The Shop screen is shown and the user is logged in as User Testing, with access 
 On a shared or borrowed phone, another person can use the account, see the address and place orders.
 
 **How it is caught:**
-TC-SPL-02, row 3 ("logged in, tapped Log out and closed the app → Login"). It is a High priority automation candidate.
+TC-SPL-02, row 3 ("logged in, tapped Log out and closed the app → Login").
 
 ---
 
