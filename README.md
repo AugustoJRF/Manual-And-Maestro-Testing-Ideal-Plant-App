@@ -21,6 +21,7 @@ The plant photos are my own, taken from my first web project, *The Ideal Plant*.
 | [`docs/requirements.md`](docs/requirements.md) | 47 requirements, screen by screen, with the screens, out-of-scope items and test data |
 | [`docs/test-cases.md`](docs/test-cases.md) | 40 manual test cases in Given / When / Then, with priority and automation candidates |
 | [`docs/accessibility-ids.md`](docs/accessibility-ids.md) | The accessibility IDs the developers must add for the automated tests |
+| [`docs/bug-report-examples.md`](docs/bug-report-examples.md) | 3 example bug reports (login, payment and stock), with animated evidence |
 | [`docs/screens/`](docs/screens) | The app screens |
 | [`agents/`](agents) | Instructions of the two AI agents used in the automation phase |
 | [`automation/maestro/`](automation/maestro) | The Maestro E2E purchase flow |
@@ -59,6 +60,8 @@ automation/maestro/
 ### The E2E purchase flow
 
 Open the app → log in → add 2 units of the first plant → check the Cart → pay with Card → order placed → back to the Shop.
+
+<img src="docs/screens/animations/e2e-purchase-flow.gif" width="320" alt="E2E purchase flow, step by step, with the Maestro file that covers each step">
 
 It follows 8 manual test cases: TC-SPL-02, TC-LOG-06, TC-SHOP-04, TC-CART-01, TC-CART-07, TC-CHK-06, TC-CONF-01 and TC-CONF-03. Each common and scenario starts with the test case IDs.
 
