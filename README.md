@@ -21,7 +21,7 @@ The plant photos are my own, taken from my first web project, *The Ideal Plant*.
 | [`docs/requirements.md`](docs/requirements.md) | 47 requirements, screen by screen, with the screens, out-of-scope items and test data |
 | [`docs/test-cases.md`](docs/test-cases.md) | 40 manual test cases in Given / When / Then, with priority and automation candidates |
 | [`docs/accessibility-ids.md`](docs/accessibility-ids.md) | The accessibility IDs the developers must add for the automated tests |
-| [`docs/bug-report-examples.md`](docs/bug-report-examples.md) | 3 example bug reports (login, payment and stock), with animated evidence |
+| [`docs/bug‑report‑examples.md`](docs/bug-report-examples.md) | 3 example bug reports (login, payment and stock), with animated evidence |
 | [`docs/screens/`](docs/screens) | The app screens |
 | [`agents/`](agents) | Instructions of the two AI agents used in the automation phase |
 | [`automation/maestro/`](automation/maestro) | The Maestro E2E purchase flow |
