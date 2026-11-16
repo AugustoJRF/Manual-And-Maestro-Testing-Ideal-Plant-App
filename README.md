@@ -1,6 +1,6 @@
 # Ideal Plant — Manual and Maestro Testing
 
-QA portfolio project for **Ideal Plant**, a concept mobile app (iOS and Android) for buying plants. It covers the full QA process: requirements, manual test cases and an end-to-end flow automated with [Maestro](https://maestro.dev).
+QA portfolio project for **Ideal Plant**, a concept mobile app (iOS and Android) for buying plants. It covers the full QA process: requirements, manual test cases, an end-to-end flow automated with [Maestro](https://maestro.dev) and bug reports, supported by AI agents and skills.
 
 The plant photos are my own, taken from my first web project, *The Ideal Plant*.
 
