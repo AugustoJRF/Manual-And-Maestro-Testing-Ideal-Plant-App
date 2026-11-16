@@ -24,7 +24,7 @@ The plant photos are my own, taken from my first web project, *The Ideal Plant*.
 | [`docs/bug‑report‑examples.md`](docs/bug-report-examples.md) | 3 example bug reports (login, payment and stock), with animated evidence |
 | [`docs/screens/`](docs/screens) | The app screens |
 | [`.claude/agents/`](.claude/agents) | The two AI agents used in the automation phase |
-| [`.claude/skills/`](.claude/skills) | The project rules as reusable skills: requirements analysis, test cases, Maestro flows and bug reports |
+| [`.claude/skills/`](.claude/skills) | Reusable skills: requirements, test cases, Maestro and bug reports |
 | [`automation/maestro/`](automation/maestro) | The Maestro E2E purchase flow |
 | [`automation/reports/`](automation/reports) | The reviewer agent's reports, with my decision on each finding |
 
