@@ -23,7 +23,8 @@ The plant photos are my own, taken from my first web project, *The Ideal Plant*.
 | [`docs/accessibility-ids.md`](docs/accessibility-ids.md) | The accessibility IDs the developers must add for the automated tests |
 | [`docs/bug‑report‑examples.md`](docs/bug-report-examples.md) | 3 example bug reports (login, payment and stock), with animated evidence |
 | [`docs/screens/`](docs/screens) | The app screens |
-| [`agents/`](agents) | Instructions of the two AI agents used in the automation phase |
+| [`.claude/agents/`](.claude/agents) | The two AI agents used in the automation phase |
+| [`.claude/skills/`](.claude/skills) | The project rules as reusable skills: requirements analysis, test cases, Maestro flows and bug reports |
 | [`automation/maestro/`](automation/maestro) | The Maestro E2E purchase flow |
 | [`automation/reports/`](automation/reports) | The reviewer agent's reports, with my decision on each finding |
 
@@ -35,9 +36,22 @@ The plant photos are my own, taken from my first web project, *The Ideal Plant*.
 
 `QA instruction → Maestro Automation Agent → Automation Reviewer Agent → QA approval`
 
-- The **[Maestro Automation Agent](agents/maestro-automation-agent.md)** turns approved test cases into Maestro flows and proposes the accessibility IDs the app needs.
-- The **[Automation Reviewer Agent](agents/automation-reviewer-agent.md)** reviews the result against the requirements, test cases and instruction. It only reports; it does not change files. The automation is never reviewed by the agent that wrote it.
+- The **[Maestro Automation Agent](.claude/agents/maestro-automation-agent.md)** turns approved test cases into Maestro flows and proposes the accessibility IDs the app needs.
+- The **[Automation Reviewer Agent](.claude/agents/automation-reviewer-agent.md)** reviews the result against the requirements, test cases and instruction. It only reports; it does not change files. The automation is never reviewed by the agent that wrote it.
 - **I approve or reject** each finding. The decisions are recorded in the review reports (three rounds for this flow).
+
+### Skills
+
+The rules decided during this project were later packaged as reusable skills, so future work follows the same standards. A skill describes **how** a task is done; an agent is **who** does it.
+
+| Skill | Used for | Used by |
+|---|---|---|
+| [`requirements-analysis`](.claude/skills/requirements-analysis/SKILL.md) | Reviewing requirements before writing test cases | The QA |
+| [`gherkin-test-cases`](.claude/skills/gherkin-test-cases/SKILL.md) | Writing and reading test cases | The QA and both agents |
+| [`maestro-flows`](.claude/skills/maestro-flows/SKILL.md) | Writing and reviewing Maestro flows | Both agents |
+| [`bug-reports`](.claude/skills/bug-reports/SKILL.md) | Reporting bugs | The QA |
+
+The agents load their skills through the `skills` field of their instruction files, so the automation agent writes and the reviewer checks against the same rules.
 
 ## Automation
 
