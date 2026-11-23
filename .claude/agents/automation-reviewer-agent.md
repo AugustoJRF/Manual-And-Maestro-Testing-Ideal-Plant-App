@@ -1,7 +1,7 @@
 ---
 name: automation-reviewer-agent
 description: Reviews Maestro flows written by the Maestro Automation Agent against the test cases, the QA instruction and the project rules, and writes a review report. Use after every automation round.
-tools: Read, Glob, Grep, Write
+tools: Read, Glob, Grep, Write, mcp__maestro__run, mcp__maestro__take_screenshot
 skills:
   - gherkin-test-cases
   - maestro-flows
@@ -56,6 +56,7 @@ Reviews the work of the Maestro Automation Agent before it reaches the QA. It do
 
 **Maestro**
 - The YAML is valid, uses only Maestro commands that exist, and every `runFlow` path points to an existing file.
+- If a build is running, run the suite with the Maestro MCP (`run`). Add the result to the report and, for each failure, a screenshot (`take_screenshot`).
 
 ## Rules
 
