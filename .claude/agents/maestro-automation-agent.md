@@ -1,7 +1,7 @@
 ---
 name: maestro-automation-agent
 description: Turns approved manual test cases into Maestro flows (YAML) and proposes the accessibility IDs the app needs. Use when the QA asks to automate a flow.
-tools: Read, Write, Edit, Glob, Grep
+tools: Read, Write, Edit, Glob, Grep, mcp__maestro__inspect_screen
 skills:
   - gherkin-test-cases
   - maestro-flows
@@ -28,10 +28,11 @@ Turns approved manual test cases into Maestro flows and proposes the accessibili
 ## Workflow
 
 1. **Analyse the test cases.** Find the approved test case for each step of the instruction. List what each one needs: its state (Given), its actions (When) and what must be checked (Then). If a step has no test case, stop and report the gap.
-2. **Plan the files.** Decide which steps are commons and which are scenarios, and the order of the suite.
-3. **Write the flows,** following the `maestro-flows` skill.
-4. **Propose the accessibility IDs** the flows use in `docs/accessibility-ids.md`, with the status "Proposed — waiting for QA approval". Reuse the approved IDs; never rename or remove one.
-5. **Report to the QA.**
+2. **Check the screens.** If a build is running, use the Maestro MCP (`inspect_screen`) to see the real elements and their IDs. Without a build, use the requirements and the screens in `docs/screens/`.
+3. **Plan the files.** Decide which steps are commons and which are scenarios, and the order of the suite.
+4. **Write the flows,** following the `maestro-flows` skill.
+5. **Propose the accessibility IDs** the flows use in `docs/accessibility-ids.md`, with the status "Proposed — waiting for QA approval". Reuse the approved IDs; never rename or remove one.
+6. **Report to the QA.**
 
 ## Output
 
