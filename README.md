@@ -25,6 +25,8 @@ The plant photos are my own, taken from my first web project, *The Ideal Plant*.
 | [`docs/screens/`](docs/screens) | The app screens |
 | [`.claude/agents/`](.claude/agents) | The two AI agents used in the automation phase |
 | [`.claude/skills/`](.claude/skills) | Reusable skills: requirements, test cases, Maestro and bug reports |
+| [`CLAUDE.md`](CLAUDE.md) | Project context the AI reads at the start of every session |
+| [`.mcp.json`](.mcp.json) | Connection to the Maestro MCP server, for when a build exists |
 | [`automation/maestro/`](automation/maestro) | The Maestro E2E purchase flow |
 | [`automation/reports/`](automation/reports) | The reviewer agent's reports, with my decision on each finding |
 
@@ -52,6 +54,11 @@ The rules decided during this project were later packaged as reusable skills, so
 | [`bug-reports`](.claude/skills/bug-reports/SKILL.md) | Reporting bugs | The QA |
 
 The agents load their skills through the `skills` field of their instruction files, so the automation agent writes and the reviewer checks against the same rules.
+
+### Project context and MCP
+
+- **`CLAUDE.md`** gives the AI the project context at the start of every session: where things are, the workflow and the general rules.
+- **`.mcp.json`** connects the agents to the [Maestro MCP server](https://docs.maestro.dev/get-started/maestro-mcp). With a running build, the automation agent can inspect the screen to confirm the IDs, and the reviewer can run the flows and attach screenshots. In this project there is no build, so the agents only read and write files.
 
 ## Automation
 
